@@ -30,7 +30,7 @@ The result: Claude behaves like a PM collaborator who knows your style and has r
 - `ideation` - turns brain dumps into structured specs or PRDs
 - `critique-idea` - steel-mans then pokes holes
 - `status-update` - generates stakeholder updates from project context
-- `process-document` - documents repeatable processes
+- `process-document` - processes raw input materials (can be added as projects evolve) in .md docs
 
 **Templates** (`templates/`)
 
