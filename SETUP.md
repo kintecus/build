@@ -53,6 +53,10 @@ Everything else stays on: heading structure, no trailing spaces, etc.
 git config core.hooksPath .githooks
 ```
 
+## Skill authoring notes
+
+**Do not use `disable-model-invocation: true` in skill frontmatter.** This flag blocks the `Skill` tool from invoking the skill programmatically - not just auto-triggering. The correct pattern is to write a precise `description` field that only matches explicit user intent. Adding "Only invoke when the user explicitly runs /skill-name" to the description is sufficient to prevent accidental auto-triggering.
+
 ## Structure
 
 See `CLAUDE.md` for the full repo structure and how Claude Code interacts with it.

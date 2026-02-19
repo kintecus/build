@@ -1,7 +1,6 @@
 ---
 name: process-document
-description: Process a raw document (PDF, text, export) into a structured markdown summary. Use when adding new reference documents to a project.
-disable-model-invocation: true
+description: Process a raw document (PDF, text, export) into a structured markdown summary. Only invoke when the user explicitly runs /process-document or asks to process a specific file.
 ---
 
 # Process Document

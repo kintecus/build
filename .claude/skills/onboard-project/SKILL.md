@@ -1,7 +1,6 @@
 ---
 name: onboard-project
-description: Scaffold a new project, process raw input documents, interview the PM to capture context, and generate BRIEF.md, STATUS.md, and WAYS-OF-WORKING.md. Use when setting up a new project in the workspace.
-disable-model-invocation: true
+description: Scaffold a new project, process raw input documents, interview the PM to capture context, and generate BRIEF.md, STATUS.md, and WAYS-OF-WORKING.md. Only invoke when the user explicitly runs /onboard-project or asks to onboard a new project by name.
 ---
 
 # Onboard Project
