@@ -69,7 +69,11 @@ Present each for review. Iterate based on feedback.
 
 ### Step 5: Update CLAUDE.md
 
-Add the new project to the "Active projects" section in the root CLAUDE.md.
+Add the new project to the "Active projects" section in the workspace `CLAUDE.md` (at the repo root).
+
+### Step 6 (optional): Tune per-project persona
+
+Ask the PM if they want to set a project-specific agent persona (e.g., "act as a senior Amazon TPM for this engagement"). If yes, invoke the `tune-persona` skill. This creates `projects/{project-name}/CLAUDE.md` from `templates/PROJECT-CLAUDE.md`.
 
 ## Notes
 

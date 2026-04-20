@@ -1,11 +1,16 @@
-# Build - PM workspace
+# Build - Workspace instructions
+
+This file is loaded by Claude Code when you launch from the workspace root. It tells Claude who you are, how you work, and how the workspace is laid out.
+
+Treat this as a template. Replace the placeholder blocks with your own content. Anything between `<!-- -->` is guidance, not output.
 
 ## About the operator
 
-<!-- Fill in your own context here. Example:
+<!-- Fill in your context here. Example:
 Your name, role, and domain background. Years of experience. Current engagements.
-What you're optimizing for right now.
--->
+What you're optimizing for right now (shipping, learning, hiring, exiting, etc.).
+
+The richer this section, the better Claude can tailor outputs to your voice and situation. -->
 
 ## How to work with me
 
@@ -15,48 +20,64 @@ The defaults below reflect a builder-operator mindset. -->
 - Be a thinking partner, not a yes-man. Challenge my ideas before refining them.
 - When I'm dumping thoughts, help me structure them before jumping to solutions.
 - Default to concise. Go deep only when I ask.
-- No filler, no excessive enthusiasm. Friendly but professional.
 - Push back when warranted. I'm not always right.
+- No filler, no excessive enthusiasm. Friendly but professional.
+- Match output weight to idea maturity - rough idea gets a one-pager, mature plan gets a spec.
 
 ## Core PM principles
 
 <!-- Optional: describe your PM philosophy here, or link to a pm-principles skill
-in ~/.claude/skills/pm-principles/ generated via the /pm-principles interview. -->
+in ~/.claude/skills/pm-principles/. -->
 
 - Process as infrastructure (quick capture, quick retrieval), not process as ceremony.
-- Prefer short, visual specs over long prose documents. Match output weight to idea maturity.
-- If something is repeatable, it should be automated or templated.
+- Prefer short, visual specs over long prose documents.
+- If something is repeatable, automate or template it.
 
-## Repo structure
+## Workspace layout
+
+This workspace is multi-project. Each subdirectory under `projects/` is an independent engagement with its own context.
 
 ```
 build/
-  CLAUDE.md                    # You're reading it. System-level instructions.
-  .claude/skills/              # Project-level skills (see below)
-  projects/                    # One folder per active project (gitignored)
+  CLAUDE.md                    # You are here. Workspace-level instructions.
+  WORKSPACE.md                 # Explains the layered CLAUDE.md model and why CC runs from here.
+  .claude/skills/              # Workspace-level skills.
+  templates/                   # File templates (BRIEF, STATUS, WAYS-OF-WORKING, DECISION, PROJECT-CLAUDE).
+  docs/                        # Reference docs (memory, obsidian, plugins, skills catalog).
+  examples/                    # Worked examples - real engagements anonymized for reference.
+  projects/                    # Active engagements (gitignored).
     {project}/
+      CLAUDE.md                # Optional. Per-project agent persona.
       BRIEF.md                 # From onboarding interview. Background, goals, stakeholders.
       STATUS.md                # Living doc. Current state, priorities, blockers.
-      WAYS-OF-WORKING.md       # How you operate on this project. Rhythms, capture habits.
-      raw/                     # Original input docs. Reference only.
-      docs/                    # Processed summaries of raw inputs + working docs.
-        INDEX.md               # One-line description per file.
-      decisions/               # Key decisions with rationale. YYYY-MM-DD-title.md
-      comms/                   # Stakeholder updates, Slack threads, meeting notes.
-  templates/                   # File templates (not skills).
+      WAYS-OF-WORKING.md       # Project rhythms, capture habits.
+      raw/                     # Original input docs - drop zone, never edited.
+      docs/                    # Processed summaries + working docs.
+        INDEX.md
+      decisions/               # YYYY-MM-DD-title.md
+      comms/                   # Stakeholder updates, meeting notes, daily notes.
 ```
+
+See `WORKSPACE.md` for the full reasoning behind this structure.
 
 ## Working with project context
 
-1. Check STATUS.md first for current state
-2. Read BRIEF.md for background when needed
-3. Read WAYS-OF-WORKING.md to understand project-specific operating mode
-4. Browse docs/INDEX.md before opening individual docs
-5. Only open raw/ if docs/ summaries are insufficient
-6. Check decisions/ for prior rationale before suggesting changes
+When Claude enters any `projects/{name}/` folder, follow this order:
+
+1. Read `projects/{name}/CLAUDE.md` if present - it sets the agent persona for this project.
+2. Check `STATUS.md` for current state.
+3. Read `BRIEF.md` for background when needed.
+4. Read `WAYS-OF-WORKING.md` to understand project-specific operating mode.
+5. Browse `docs/INDEX.md` before opening individual docs.
+6. Never read `raw/` files directly for context - use processed `docs/` summaries instead. If no processed version exists, run `/process-document` on the raw file first.
+7. Check `decisions/` for prior rationale before suggesting changes.
+8. When creating or modifying files in `docs/` or `decisions/`, update `docs/INDEX.md` in the same turn.
 
 ## Active projects
 
-<!-- List your active projects here as you add them, e.g.:
-- **Project Name** - `projects/project-name/` - Brief description. Start date.
+<!-- Add your active projects as you onboard them, e.g.:
+- **AdScale forecasting** - `projects/adscale/` - Programmatic ad tech forecasting service. Jan-Mar 2026.
+- **Personal site rewrite** - `projects/site/` - Hugo -> Astro migration. Q2 2026.
+
+For a worked example of a fully populated project, see `examples/adscale-case-study/`.
 -->

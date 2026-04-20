@@ -5,3 +5,6 @@
 node_modules/
 projects/
 .claude/settings.local.json
+
+# Anonymization working files (never commit real-name mappings)
+examples/*/_anonymization-key.md
