@@ -52,6 +52,7 @@ The integration works as built. The accuracy gap is a function of the model pred
 We propose deploying both the current logic (v1, historical win rates) and the new logic (v2+, model predictions) side by side in production. v1 keeps serving live traffic, v2 is available for evaluation and comparison against real production data.
 
 This approach:
+
 - Completes the integration deliverable per the agreed DoD
 - Gives CLIENT-PRODUCT a production-grade comparison tool for model evaluation
 - Unblocks the release sequence with zero risk to live forecasting
@@ -62,9 +63,10 @@ Without parallel deployment, the entire release sequence stalls on model predict
 **2. ZIP code support (1.2A) - production validation required**
 
 ZIP-level data is approximately 10x the volume of country-level. Three issues:
+
 - STAGING environment resources are insufficient for end-to-end testing at this scale
 - There is no staging environment with production-representative data - standard practice for projects of this scale. To compensate, Northwind built a data replication pipeline that syncs production data into STAGING, but it runs 3-4 hours per cycle (nightly jobs) and is not fully stable - scripts crash and don't auto-restart. This infrastructure is outside the MPT deliverable scope.
-- A percentage of personas are currently missing ZIP values, with no way to assess the full picture without production data
+- A percentage of audiences are currently missing ZIP values, with no way to assess the full picture without production data
 
 For ZIPs specifically, parallel deployment to production (v1/vX) is not just preferred - it's the only viable path. STAGING cannot provide the data completeness or resource capacity needed for proper validation.
 
@@ -83,6 +85,7 @@ DELIVERY-LEAD
 > **Internal notes (do not send)**
 >
 > Key framing choices:
+>
 > - Lead with facts, not blame. CLIENT-PRODUCT's QA is described as "thorough" (positive), his findings are cited as evidence that supports our position.
 > - Root cause stated clearly but neutrally: model predictions produce less accurate results than historical approach. We don't say "AdScale's data is bad."
 > - V1/V2 parallel deploy is framed as the recommended option, not a workaround. It "completes the deliverable per DoD."
@@ -93,6 +96,7 @@ DELIVERY-LEAD
 > - Signed by DELIVERY-LEAD per his plan. He sends, then immediately requests a meeting for Tue Mar 17.
 >
 > Changes from v1:
+>
 > - Updated with CLIENT-PRODUCT's 20k-scenario findings (much stronger evidence than 901-scenario round)
 > - Added specific numbers from CLIENT-PRODUCT's analysis to back every claim
 > - Added ZIP section as separate item per ENG-LEAD's input
@@ -101,6 +105,7 @@ DELIVERY-LEAD
 > - Signed by DELIVERY-LEAD instead of PM per DELIVERY-LEAD's plan
 >
 > Changes from v2:
+>
 > - Added truncation compounding as second contributing factor alongside bucketing
 > - Framed both as "addressable, but require alignment" - constructive, not accusatory
 > - Margin application considered but excluded: it's a flat % applied identically on both sides, so it amplifies the absolute gap but doesn't cause the divergence. Mentioning it would muddy the message.
@@ -112,6 +117,7 @@ DELIVERY-LEAD
 > The current tone leans defensive - "we did our job, the gap is on your side." That's the right posture for a clean exit. But if the real goal is continuing the engagement into Phase 2, the email needs to land differently: "we understand your system deeply, we diagnosed root causes you didn't see, we have a practical plan - you want us in the room for what comes next."
 >
 > Specific things to consider:
+>
 > - The root cause analysis (bucketing + truncation) is the best sales pitch in the email. It proves Northwind understands AdScale's pipeline at a level a new vendor would need months to reach. Don't bury it.
 > - "Our team allocation ends March 31" currently reads as a deadline/threat. If continuity is the goal, reframe as: "we're ready to continue, need to align on scope to plan staffing."
 > - The parallel deploy proposal is inherently a relationship move - Northwind solving AdScale's problem, not just delivering scope. That's Phase 2 energy. Lean into it.

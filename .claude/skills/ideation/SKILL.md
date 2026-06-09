@@ -53,9 +53,11 @@ Conduct a targeted interview based on the selected track. Load the appropriate r
 
 ### Interview principles
 
-- Ask 2-3 questions at a time, max
+- Ask 2-3 questions at a time, max; target three rounds or less
+
 - Target the weakest dimension first
 - Be specific, not open-ended. Offer options where possible.
+- Use the `AskUserQuestion` tool when interviewing the user.
 - Reference what the user already said: "You mentioned X, did you mean...?"
 - If the user says "I don't know" - that's useful signal, not a gap to force closed
 - Match question sophistication to idea maturity. Don't ask about acceptance criteria for a hunch.

@@ -54,6 +54,7 @@ Conduct a structured interview to populate the project brief. Use processed docs
 5. **Risks**: What worries you most?
 6. **Your role**: What are you responsible for? What authority do you have?
 7. **Ways of working**: How will you operate day-to-day on this project? What's your rhythm? What tools? How do you want to capture and track things?
+8. **Agent persona**: What kind of PM partner do you need on this project? Think about: archetypes (senior TPM, product strategist, program manager, builder-operator), document standards (Amazon 6-pager precision vs. lean one-pagers), decision rigor (log everything vs. only key calls), communication style (formal/precise vs. casual/fast). If the PM isn't sure, suggest an archetype based on what you've learned about the project so far.
 
 Ask 2-3 questions at a time. Don't overwhelm. Let the conversation flow naturally. Use processed docs to pre-fill what you can and validate with the PM rather than asking from scratch.
 
@@ -64,16 +65,14 @@ From interview outputs, create:
 1. `BRIEF.md` using [brief-template.md](references/brief-template.md)
 2. `STATUS.md` using [status-template.md](references/status-template.md)
 3. `WAYS-OF-WORKING.md` using [ways-of-working-template.md](references/ways-of-working-template.md)
+4. `CLAUDE.md` using the project CLAUDE.md template (`templates/PROJECT-CLAUDE.md`), populated from the agent persona interview answers. This file tunes Claude's behavior when working in this project directory.
 
 Present each for review. Iterate based on feedback.
 
-### Step 5: Update CLAUDE.md
+### Step 5: Update workspace
 
-Add the new project to the "Active projects" section in the workspace `CLAUDE.md` (at the repo root).
-
-### Step 6 (optional): Tune per-project persona
-
-Ask the PM if they want to set a project-specific agent persona (e.g., "act as a senior Amazon TPM for this engagement"). If yes, invoke the `tune-persona` skill. This creates `projects/{project-name}/CLAUDE.md` from `templates/PROJECT-CLAUDE.md`.
+1. Add the new project to the "Active projects" section in the workspace `CLAUDE.md` (at the repo root).
+2. Confirm that the project-level `CLAUDE.md` was generated with the persona configuration. (To adjust the persona later, invoke the `tune-persona` skill.)
 
 ## Notes
 

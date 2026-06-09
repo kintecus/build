@@ -9,7 +9,7 @@ updated: 2026-03-16 09:30
 
 ## Operating mode
 
-Fractional TPM (0.5 FTE, ~20 hrs/week) splitting time with Satori Ads. Hands-on delivery manager + scrum master, not strategic PM. Builder-operator mode: close to technical implementation, using Claude as force multiplier for documentation, synthesis, and deliverable formatting. Kanban.
+Fractional TPM (0.5 FTE, ~20 hrs/week) splitting time with a second engagement. Hands-on delivery manager + scrum master, not strategic PM. Builder-operator mode: close to technical implementation, using Claude as force multiplier for documentation, synthesis, and deliverable formatting. Kanban.
 
 Weight of process: lightweight. Weekly syncs, Kanban board, status reports. No heavy ceremony - the team is small and communicates well async.
 
@@ -41,7 +41,7 @@ This workspace is my second brain for the project. Goal: capture important stuff
 
 - **Primary channel**: Slack (both internal Northwind and external AdScale channels)
 - **Stakeholder updates**: Weekly to AdScale via sync call. Internal status reports for DELIVERY-LEAD/Northwind.
-- **Escalation path**: Technical blockers -> CLIENT-DS-LEAD or CLIENT-PRODUCT-MGR. Product/scope -> CLIENT-PRODUCT. Account/commercial -> DELIVERY-LEAD. Persona questions -> CLIENT-PERSONA-LEAD directly (confirmed Feb 19).
+- **Escalation path**: Technical blockers -> CLIENT-DS-LEAD or CLIENT-PRODUCT-MGR. Product/scope -> CLIENT-PRODUCT. Account/commercial -> DELIVERY-LEAD. Audience questions -> CLIENT-PERSONA-LEAD directly (confirmed Feb 19).
 - **Claude Chrome extension**: Used for extracting Slack conversations and synthesizing high-reply-count threads. Valuable for multi-day channel reviews and stakeholder responsiveness tracking.
 
 ## Tools

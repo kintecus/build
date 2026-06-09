@@ -15,7 +15,7 @@ Phase 1 upgrades AdScale's forecasting tool with better prediction models and ge
 |---|---|---|---|
 | Model integration | Replaces historical guesswork with ML-backed predictions (win rates, CTR, viewability) | QA with CLIENT-PRODUCT | Was Mar 16, slipping ~1 week |
 | Geo targeting | Forecasts at postal code level instead of country-only | Code complete, waiting on model integration | After model integration |
-| Recommender | Detects narrow audiences, suggests alternative personas | In development (embedding pipeline PR submitted) | Mar 31 |
+| Recommender | Detects narrow audiences, suggests alternative audiences | In development (embedding pipeline PR submitted) | Mar 31 |
 
 ## What's working
 

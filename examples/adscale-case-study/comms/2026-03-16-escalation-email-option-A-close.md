@@ -66,7 +66,7 @@ ZIP-level data is 10x the volume of country-level data. Three constraints make S
 
 1. STAGING environment resources cannot support end-to-end testing at ZIP-level data volume.
 2. There is no staging environment with production-representative data - standard practice for projects of this scale. To compensate, Northwind built a data replication pipeline that syncs production data into STAGING, but it runs 3-4 hours per cycle as a nightly job and is not fully stable (scripts crash without auto-restart). This infrastructure sits outside the MPT deliverable scope.
-3. [X]% of personas are missing ZIP values in STAGING. The full picture is only available in production.
+3. [X]% of audiences are missing ZIP values in STAGING. The full picture is only available in production.
 
 For ZIPs, we propose a dedicated v3/forecast endpoint on production - separate from the predictions v2/forecast - allowing ZIP-specific QA and tuning independently. v1/forecast remains untouched throughout.
 
@@ -74,7 +74,7 @@ For both predictions and ZIPs, production is the only viable end-to-end environm
 
 **Scope boundary**
 
-In Phase 1, Northwind committed to integrating model predictions and geo-ZIP codes into the forecasting pipeline. The accuracy of the resulting forecasts depends on the input data - the model prediction files and persona ZIP coverage - which sits outside the integration scope. This was understood from the outset.
+In Phase 1, Northwind committed to integrating model predictions and geo-ZIP codes into the forecasting pipeline. The accuracy of the resulting forecasts depends on the input data - the model prediction files and audience ZIP coverage - which sits outside the integration scope. This was understood from the outset.
 
 The ongoing QA and tuning cycle - iterating on model predictions, adjusting bucketing granularity, improving ZIP data coverage - is Phase 2 scope. Our team can support this work, but it requires a separate agreement.
 

@@ -28,8 +28,11 @@ Result: Claude behaves like a PM collaborator who knows your style and has read 
 
 **Templates** (`templates/`)
 
-- `BRIEF.md`, `STATUS.md`, `WAYS-OF-WORKING.md`, `DECISION.md` - project file templates.
+- `BRIEF.md`, `STATUS.md`, `WAYS-OF-WORKING.md`, `DECISION.md` - core project file templates.
 - `PROJECT-CLAUDE.md` - per-project agent persona template.
+- `STRATEGY.md`, `EXPERIMENT.md` - optional. Durable vision/roadmap, and thesis-under-test framing, for projects that need them.
+- `CONTEXT-BRIDGE.md` - optional. Maps PM context here to a separate engineering repo when the code lives elsewhere.
+- `FREELANCE-ENGAGEMENT.md` - optional. Living log for a billable engagement: scope, deliverables, time, invoices.
 
 **Skills** (`.claude/skills/`)
 
@@ -71,9 +74,16 @@ Projects live in `projects/` (gitignored). Start a new project:
 
 To see what a fully developed project looks like, browse `examples/adscale-case-study/`.
 
-## What's new in v2
+## What's new
 
-If you saw the earlier version of this repo, the structural changes are:
+Reconciled from live use ahead of the public release:
+
+1. **Optional templates** from real projects: `STRATEGY.md` (durable vision/roadmap), `EXPERIMENT.md` (thesis-under-test), `CONTEXT-BRIDGE.md` (PM <-> separate engineering repo), and `FREELANCE-ENGAGEMENT.md` (billable engagement log).
+2. **`onboard-project` now generates a per-project `CLAUDE.md`** from the persona interview as a first-class output, not an optional afterthought.
+3. **`process-document` gained transcript handling** - detects call transcripts and runs an ASR-cleaning sub-agent (incl. non-English translate-to-English) before summarizing.
+4. **Richer `DECISION.md`** - status vocabulary now aligns with the standard ADR lifecycle (proposed / accepted / deprecated / superseded / revisiting).
+
+### From v2 (the prior structural refresh)
 
 1. **`CLAUDE.md` is now workspace-level**, not per-project. The per-project version moved to `templates/PROJECT-CLAUDE.md`.
 2. **New `WORKSPACE.md`** explains why Claude should run from the workspace root, not each project folder.

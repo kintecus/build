@@ -15,7 +15,7 @@ The Phase 1 DoD draft was posted to the AdScale Confluence Hub page before inter
 
 ## Rule
 
-1. Draft docs internally first (in pm-workspace or Google Docs)
+1. Draft docs internally first (in your workspace or Google Docs)
 2. Get approval from DELIVERY-LEAD and/or ENG-LEAD before posting to Confluence
 3. This applies to all externally visible docs - specs, DoDs, status updates on AdScale's Confluence
 

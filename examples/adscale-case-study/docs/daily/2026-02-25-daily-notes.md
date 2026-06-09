@@ -128,18 +128,19 @@ DELIVERY-LEAD's pattern: deflect accountability by framing himself as waiting on
 
 ENG-2 found that the production ClickHouse has a database `admin_data` which appears to be the same one used for the evaluation pipeline. If confirmed, we may be able to switch to it easily rather than building a separate data path. Directed at ENG-LEAD and ENG-1 for validation.
 
-**Persona descriptions** (Slack 12:57 PM)
+**Audience descriptions** (Slack 12:57 PM)
 
-Table `sandbox.tmp_stg_personae_configs` in ClickHouse contains persona manifesto/descriptions. Currently holds 8,274 personas. ENG-2 flagged uncertainty about whether this table is refreshed periodically - needs confirmation from AdScale. This is relevant for the persona recommender work (embedding service, similarity matching).
+Table `sandbox.tmp_stg_personae_configs` in ClickHouse contains audience manifesto/descriptions. Currently holds 8,274 audiences. ENG-2 flagged uncertainty about whether this table is refreshed periodically - needs confirmation from AdScale. This is relevant for the audience recommender work (embedding service, similarity matching).
 
 **Action items from findings:**
+
 - [ ] **ENG-LEAD/ENG-1** - confirm `admin_data` is the evaluation pipeline DB and assess switch effort
 - [ ] **ENG-2/PM** - ask AdScale whether `sandbox.tmp_stg_personae_configs` is periodically updated or a stale snapshot
-- [ ] **ENG-2** - clarify: are the 8,274 persona descriptions usable as-is for embedding, or do they need preprocessing?
+- [ ] **ENG-2** - clarify: are the 8,274 audience descriptions usable as-is for embedding, or do they need preprocessing?
 
-## CLIENT-DS-LEAD - CLIENT-PERSONA-LEAD's feedback on persona score extraction (Slack, late afternoon)
+## CLIENT-DS-LEAD - CLIENT-PERSONA-LEAD's feedback on audience score extraction (Slack, late afternoon)
 
-CLIENT-DS-LEAD relayed feedback from CLIENT-PERSONA-LEAD on the persona score ClickHouse query. Four items:
+CLIENT-DS-LEAD relayed feedback from CLIENT-PERSONA-LEAD on the audience score ClickHouse query. Four items:
 
 1. **Remove HTTP filter** - no `web_pages` in the table, so the filter is dead code
 2. **Avoid "multidim" term** - naming/terminology cleanup
@@ -147,10 +148,11 @@ CLIENT-DS-LEAD relayed feedback from CLIENT-PERSONA-LEAD on the persona score Cl
 4. **Add FINAL keyword** - `FROM table FINAL` ensures pending ClickHouse mutations are applied before query runs
 
 **Action items:**
-- [ ] **ENG-LEAD/ENG-1/ENG-2** - apply CLIENT-PERSONA-LEAD's four feedback items to persona score extraction query
+
+- [ ] **ENG-LEAD/ENG-1/ENG-2** - apply CLIENT-PERSONA-LEAD's four feedback items to audience score extraction query
 - [ ] **Team** - confirm whether AVG is structurally needed in ClickHouse or was a Redshift artifact
 
-**Note:** This is our first direct technical feedback from CLIENT-PERSONA-LEAD (Persona team). Good sign - he's engaging on our work. Keep the loop tight.
+**Note:** This is our first direct technical feedback from CLIENT-PERSONA-LEAD (Audience team). Good sign - he's engaging on our work. Keep the loop tight.
 
 ## Open questions
 

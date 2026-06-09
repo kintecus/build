@@ -12,6 +12,7 @@ This is an opinionated default. If your operator prefers committing directly to 
 ## Triggers
 
 Invoke when the user says:
+
 - "start this week's branch"
 - "what did i do today/this week"
 - "help me commit"

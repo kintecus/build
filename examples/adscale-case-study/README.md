@@ -121,7 +121,7 @@ This case study uses these stand-ins. The full anonymization key is intentionall
 | CLIENT-DEVOPS-1, CLIENT-DEVOPS-2 | DevOps / infra |
 | CLIENT-DECISION-1, CLIENT-DECISION-2 | Senior decision makers above the day-to-day team |
 | CLIENT-PRODUCT-BIZ | Business-side product role (referenced in passing) |
-| CLIENT-PERSONA-LEAD | Lead of the persona modeling team |
+| CLIENT-PERSONA-LEAD | Lead of the audience modeling team |
 
 **Environments & infrastructure**
 

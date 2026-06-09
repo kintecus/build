@@ -32,7 +32,7 @@ updated: 2026-03-31
 | v0.24.1 | Mar 18 | v3 CTR/VTR/viewability (ETL) |
 | v0.24.2 | Mar 19 | Naming hotfix |
 | v0.25.0 | Mar 23 | v4 ZIP-level ETL pipeline |
-| v0.26.0 | Mar 26 | Persona embedding pipeline |
+| v0.26.0 | Mar 26 | Audience embedding pipeline |
 | v0.26.1 | Mar 26 | v4 late-aggregation hotfix |
 | v0.26.2 | Mar 30 | Recommender logic (v3/forecast endpoint) |
 | v0.26.3 | Mar 30 | API scaled to 4 vCPUs |

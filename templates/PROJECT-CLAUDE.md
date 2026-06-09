@@ -7,6 +7,7 @@
 {Who should Claude behave as on this project? Define the archetype.
 
 Examples:
+
 - Senior Amazon TPM: precise docs, rigorous decision tracking, structured chaos management
 - Product strategist: big-picture thinking, market framing, stakeholder narratives
 - Builder-operator: scrappy, ship-fast, minimal process, bias toward action
@@ -19,6 +20,7 @@ Describe the archetype and what qualities matter most for this project's context
 {What level of precision and formality for project artifacts?
 
 Consider:
+
 - Writing style: Amazon 6-pager rigor vs. lean one-pagers vs. casual notes
 - Data expectations: every claim backed by evidence, or directional is fine?
 - Format preferences: structured templates vs. freeform prose
@@ -29,6 +31,7 @@ Consider:
 {How rigorously should decisions be logged?
 
 Options range from:
+
 - Log every decision with context, alternatives considered, and rationale
 - Log only key architectural/strategic decisions
 - Lightweight: capture in STATUS.md, formal decision docs only for high-stakes calls}
@@ -38,6 +41,7 @@ Options range from:
 {How should Claude communicate when producing artifacts for this project?
 
 Consider:
+
 - Tone: formal/precise vs. casual/direct
 - Audience awareness: who reads the output? Executives, engineers, mixed?
 - Conciseness: terse bullet points vs. narrative prose
@@ -48,6 +52,7 @@ Consider:
 {Any overrides or additions to workspace-level CLAUDE.md.
 
 Examples:
+
 - Always check with PM before suggesting scope changes
 - Default to conservative estimates
 - Flag any dependency on external teams immediately

@@ -42,7 +42,8 @@ build/
   CLAUDE.md                    # You are here. Workspace-level instructions.
   WORKSPACE.md                 # Explains the layered CLAUDE.md model and why CC runs from here.
   .claude/skills/              # Workspace-level skills.
-  templates/                   # File templates (BRIEF, STATUS, WAYS-OF-WORKING, DECISION, PROJECT-CLAUDE).
+  templates/                   # File templates. Core: BRIEF, STATUS, WAYS-OF-WORKING, DECISION, PROJECT-CLAUDE.
+                               #   Optional: STRATEGY, EXPERIMENT, CONTEXT-BRIDGE, FREELANCE-ENGAGEMENT.
   docs/                        # Reference docs (memory, obsidian, plugins, skills catalog).
   examples/                    # Worked examples - real engagements anonymized for reference.
   projects/                    # Active engagements (gitignored).
@@ -51,6 +52,9 @@ build/
       BRIEF.md                 # From onboarding interview. Background, goals, stakeholders.
       STATUS.md                # Living doc. Current state, priorities, blockers.
       WAYS-OF-WORKING.md       # Project rhythms, capture habits.
+      STRATEGY.md              # Optional. Durable vision, moat, roadmap (when STATUS isn't enough).
+      EXPERIMENT.md            # Optional. Thesis-under-test + verdict (when the project tests a method).
+      CONTEXT-BRIDGE.md        # Optional. Map to a separate engineering repo (when code lives elsewhere).
       raw/                     # Original input docs - drop zone, never edited.
       docs/                    # Processed summaries + working docs.
         INDEX.md

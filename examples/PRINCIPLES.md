@@ -1,4 +1,4 @@
-# PM Principles - Ostap
+# PM Principles
 
 > Generated: 2026-02-17. A living document - update when your thinking evolves.
 

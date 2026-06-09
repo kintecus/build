@@ -65,6 +65,7 @@ This matters for QA because CLIENT-PRODUCT is comparing model-based outputs agai
 Accept the gate, push for defined turnaround. ENG-LEAD already deployed v3 to STAGING with data for FR, US, DK, SE (Mar 12 morning). Ball is in CLIENT-PRODUCT's court.
 
 **Rationale:**
+
 - CLIENT-PRODUCT is the product owner and most qualified to spot business-logic issues. Catching problems before prod is in everyone's interest.
 - Pushing back on a reasonable QA step looks bad, especially when model outputs show real discrepancies vs historical.
 - The real risk is undefined turnaround and undefined acceptance criteria, not the gate itself.

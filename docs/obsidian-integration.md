@@ -10,9 +10,9 @@ You point Obsidian at the `build/` folder as a vault, keep Obsidian running, and
 
 ## Setup
 
-1. Install Obsidian: https://obsidian.md
+1. Install Obsidian: <https://obsidian.md>
 2. Open the `build/` directory as an Obsidian vault.
-3. Install `obsidian-cli`: https://github.com/Yakitrak/obsidian-cli (v1.12+).
+3. Install `obsidian-cli`: <https://github.com/Yakitrak/obsidian-cli> (v1.12+).
 4. Verify with `obsidian-cli recents` while Obsidian is running.
 
 That's it. Claude can now use the CLI.

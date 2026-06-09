@@ -52,5 +52,5 @@ The bundled skills above are workspace-shared. The referenced-but-not-bundled sk
 
 ## Finding more skills
 
-- The author's GitHub org (Tribe Coding) publishes a public skill marketplace: https://github.com/tribe-coding
-- Anthropic's own skill documentation and examples: https://docs.claude.com/en/docs/build-with-claude/agent-skills
+- The author's GitHub org (Tribe Coding) publishes a public skill marketplace: <https://github.com/tribe-coding>
+- Anthropic's own skill documentation and examples: <https://docs.claude.com/en/docs/build-with-claude/agent-skills>

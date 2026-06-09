@@ -48,6 +48,7 @@ DELIVERY-LEAD and ENG-LEAD flagged on today's daily: CLIENT-PRODUCT's QA gate is
 After cross-checking: on the Mar 5 DoD call, CLIENT-PRODUCT asked for API access to test, PM set expectations as "smoke testing and common sense validation, not rigorous metric-based QA." CLIENT-PRODUCT agreed. That's what was aligned - a light smoke test, not a blocking gate. The Google Doc has "API shared w/ CLIENT-PRODUCT" as a pending suggestion (never formally accepted, but per DELIVERY-LEAD we weren't expecting AdScale to sign off on each edit - the call alignment counts).
 
 What's new:
+
 - **Blocking gate before production** - the agreed level was a smoke test. CLIENT-PRODUCT escalated to "no prod releases without sign-off." His intent is probably to validate the combined 1.2A+1.2B result, which is reasonable. But his language plus the versioned release plan (v2 → v3 → v4) means it applies to intermediate steps too.
 - **No acceptance criteria** - "no major discrepancy" without defining what's acceptable. Model outputs show ~2x differences vs historical, which are expected.
 - **No turnaround time** - open-ended. This is the real timeline risk.

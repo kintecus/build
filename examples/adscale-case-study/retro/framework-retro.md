@@ -26,6 +26,7 @@ The system is straightforward. Each project gets a directory with three living d
 - **WAYS-OF-WORKING.md** - how I operate on this specific project. Meeting rhythms, capture habits, communication channels.
 
 Beyond those, the directory accumulates:
+
 - **Daily notes** - one per working day. Context from yesterday, overnight developments, today's priorities.
 - **Decision log** - every meaningful decision with context, options, and rationale. Date-stamped.
 - **Raw inputs** - transcripts, exports, Slack dumps. Never edited, only processed.
@@ -104,6 +105,7 @@ After 11 weeks, I found myself structuring new problems the same way even outsid
 ## The numbers
 
 Over 11 weeks:
+
 - ~55 daily notes generated and reviewed
 - 9 formal decision documents
 - 1 technical specification (~50 pages, continuously updated, verified against code)
