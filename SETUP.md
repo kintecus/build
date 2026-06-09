@@ -14,7 +14,7 @@ pip install pre-commit
 # 3. Install the markdown lint hook
 pre-commit install
 
-# 4. (Optional) Wire the PlantUML diagram validator
+# 4. (Optional) Wire the diagram validators (PlantUML + Mermaid)
 git config core.hooksPath .githooks
 
 # 5. Fill in your context
@@ -60,7 +60,7 @@ Everything else stays on: heading structure, no trailing spaces.
 
 ## Git hooks
 
-`.githooks/pre-commit` checks that PlantUML diagram URLs in markdown files stay in sync with their source blocks. Enable with:
+`.githooks/pre-commit` keeps PlantUML diagram URLs in sync with their source blocks and validates Mermaid diagram syntax in markdown files. Enable with:
 
 ```bash
 git config core.hooksPath .githooks
