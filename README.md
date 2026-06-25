@@ -65,6 +65,7 @@ Then fill in the placeholder sections of `CLAUDE.md` and onboard your first proj
 - `ideation` - turns brain dumps into structured specs or PRDs.
 - `critique-idea` - steel-mans then pokes holes.
 - `status-update` - generates stakeholder updates from project context.
+- `review-prep` - fresh-context pre-review punch list (pulse, decisions waiting, stale flags, the 3 questions for the meeting).
 - `process-document` - processes raw input materials into `.md` summaries.
 - `tune-persona` - sets or updates the per-project agent persona.
 - `git-week` - lightweight weekly git workflow helper (branches, commits, activity review).

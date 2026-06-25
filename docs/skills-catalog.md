@@ -12,6 +12,7 @@ Skills under `.claude/skills/`:
 | `ideation` | Turns brain dumps and half-formed ideas into structured one-pagers, specs, or PRDs. Chooses output weight based on idea maturity. |
 | `critique-idea` | Steel-mans an idea first, then identifies gaps, risks, and alternatives. Use when you want honest pushback. |
 | `status-update` | Generates stakeholder status updates from the BRIEF + STATUS + recent comms in a project folder. |
+| `review-prep` | Dispatches a fresh-context agent over STATUS + docs + decisions to produce a pre-review punch list: pulse, decisions waiting on you, decisions recently closed, stale/at-risk flags, and the 3 questions worth the meeting. The cold read catches drift and cross-artifact risks your own working memory misses. |
 | `process-document` | Processes a raw file (PDF, transcript, CSV export) from `raw/` into a structured markdown summary in `docs/`. |
 | `tune-persona` | Sets or updates the per-project agent persona (the project-level `CLAUDE.md`). Archetype, document standards, decision rigor, communication style. |
 | `git-week` | Lightweight weekly git workflow: start a week branch, draft commit messages, review activity. |
