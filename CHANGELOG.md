@@ -6,7 +6,8 @@ Notable changes to the Build framework. Newest first.
 
 Reconciled from live use ahead of the public release:
 
-1. **Optional templates** from real projects: `STRATEGY.md` (durable vision/roadmap), `EXPERIMENT.md` (thesis-under-test), `CONTEXT-BRIDGE.md` (PM <-> separate engineering repo), and `FREELANCE-ENGAGEMENT.md` (billable engagement log).
+1. **New `review-prep` skill** ported from live use: dispatches a fresh-context agent to read a project's STATUS/docs/decisions and produce a pre-review punch list (pulse, decisions waiting, decisions closed, stale/at-risk flags, the 3 questions for the meeting). The fresh-context dispatch is the point - a cold reader catches STATUS drift and cross-artifact risks the operator's own working memory misses. Validated across two project shapes before porting.
+2. **Optional templates** from real projects: `STRATEGY.md` (durable vision/roadmap), `EXPERIMENT.md` (thesis-under-test), `CONTEXT-BRIDGE.md` (PM <-> separate engineering repo), and `FREELANCE-ENGAGEMENT.md` (billable engagement log).
 2. **`onboard-project` now generates a per-project `CLAUDE.md`** from the persona interview as a first-class output, not an optional afterthought.
 3. **`process-document` gained transcript handling** - detects call transcripts and runs an ASR-cleaning sub-agent (incl. non-English translate-to-English) before summarizing.
 4. **Richer `DECISION.md`** - status vocabulary now aligns with the standard ADR lifecycle (proposed / accepted / deprecated / superseded / revisiting).
