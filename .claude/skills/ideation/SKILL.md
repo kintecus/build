@@ -93,4 +93,4 @@ Present the document for review. Iterate based on feedback.
 - Don't inflate early-stage thinking into heavy documents. That kills ideas.
 - If during the interview the idea matures beyond its original track (e.g., exploring becomes shaping), propose upgrading the track.
 - If the idea isn't ready for any structured output, say so. "This needs more thinking time" is a valid output.
-- Reference the PM's principles (CLAUDE.md) when making judgment calls about document weight.
+- Reference the PM's principles (`AGENTS.md`) when making judgment calls about document weight.

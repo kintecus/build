@@ -1,10 +1,10 @@
 # Skills catalog
 
-Skills are the reusable behaviors Claude can invoke with the `Skill` tool (or the user via `/skill-name`). This catalog covers what ships in this repo and what patterns the author uses elsewhere.
+Skills are the reusable behaviors your agent can invoke on its own, or that you trigger with `/skill-name`. They follow the [Agent Skills](https://agentskills.io) open standard, so they aren't tied to any one tool. This catalog covers what ships in this repo and what patterns the author uses elsewhere.
 
 ## Bundled in this repo
 
-Skills under `.claude/skills/`:
+Skills live under `.claude/skills/`, with `.agents/skills` symlinked to the same folder so both discovery conventions find them. See [portability.md](portability.md) for why.
 
 | Skill | Purpose |
 |---|---|
@@ -14,7 +14,7 @@ Skills under `.claude/skills/`:
 | `status-update` | Generates stakeholder status updates from the BRIEF + STATUS + recent comms in a project folder. |
 | `review-prep` | Dispatches a fresh-context agent over STATUS + docs + decisions to produce a pre-review punch list: pulse, decisions waiting on you, decisions recently closed, stale/at-risk flags, and the 3 questions worth the meeting. The cold read catches drift and cross-artifact risks your own working memory misses. |
 | `process-document` | Processes a raw file (PDF, transcript, CSV export) from `raw/` into a structured markdown summary in `docs/`. |
-| `tune-persona` | Sets or updates the per-project agent persona (the project-level `CLAUDE.md`). Archetype, document standards, decision rigor, communication style. |
+| `tune-persona` | Sets or updates the per-project agent persona (the project-level `AGENTS.md`). Archetype, document standards, decision rigor, communication style. |
 | `git-week` | Lightweight weekly git workflow: start a week branch, draft commit messages, review activity. |
 
 ## Referenced but not bundled
@@ -36,22 +36,35 @@ The author's personal setup includes several skills that depend on individual ha
 
 ## How to add your own skills
 
-Skills live in `.claude/skills/<skill-name>/` with a `SKILL.md` that follows the Claude Code skill format. The key is the `description` frontmatter - it's what Claude uses to decide whether to invoke the skill.
+A skill is a folder containing a `SKILL.md` with YAML frontmatter. Per the [specification](https://agentskills.io/specification), only two fields are required:
 
-A precise description that names specific triggers ("use when user says X or is doing Y") works better than a vague description. See any bundled skill for the format.
+- `name` - lowercase, hyphens, max 64 chars, and it must match the folder name.
+- `description` - max 1024 chars. This is what the agent reads at startup to decide whether the skill is relevant.
 
-**Avoid `disable-model-invocation: true`** - it blocks programmatic invocation via the `Skill` tool, not just auto-triggering. Use a tight description instead.
+The `description` does the real work. A precise one that names specific triggers ("use when user says X or is doing Y") beats a vague one. See any bundled skill for the shape.
+
+Optional fields (`license`, `compatibility`, `metadata`, `allowed-tools`) are in the spec but rarely needed. Anything outside the spec is a vendor extension and other tools will ignore it - keep to `name` + `description` and your skill runs everywhere.
+
+**Avoid `disable-model-invocation: true`** - a Claude Code flag, not part of the spec. It blocks programmatic invocation via the `Skill` tool, not just auto-triggering. Use a tight description instead.
+
+Validate before committing:
+
+```bash
+skills-ref validate ./my-skill
+```
 
 ## Personal vs. shared skills
 
 There are two good places to put skills:
 
-- `~/.claude/skills/` (personal, global) - skills that apply to every repo you work in.
-- `<workspace>/.claude/skills/` (workspace, shared) - skills that belong with a specific project or set of projects.
+- Personal, global - applies to every repo you work in. Path depends on your agent: `~/.claude/skills/`, `~/.agents/skills/`, or `~/.config/opencode/skills/`.
+- Workspace, shared - belongs with a specific project or set of projects. Here that's `<workspace>/.claude/skills/`, reachable at `.agents/skills` too.
 
 The bundled skills above are workspace-shared. The referenced-but-not-bundled skills are typical candidates for personal-global.
 
 ## Finding more skills
 
+- The Agent Skills spec and client list: <https://agentskills.io>
 - The author's GitHub org (Tribe Coding) publishes a public skill marketplace: <https://github.com/tribe-coding>
-- Anthropic's own skill documentation and examples: <https://docs.claude.com/en/docs/build-with-claude/agent-skills>
+- Anthropic's skill documentation and examples: <https://code.claude.com/docs/en/skills>
+- OpenAI's skills catalog: <https://github.com/openai/skills>
