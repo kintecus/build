@@ -23,7 +23,7 @@
 
 | PM artifact (this repo) | Engineering counterpart |
 |---|---|
-| [[BRIEF]] - product pillars, domain, stakeholders | `{engineering CLAUDE.md / domain docs}` |
+| [[BRIEF]] - product pillars, domain, stakeholders | `{engineering AGENTS.md / domain docs}` |
 | [[STATUS]] - current focus, blockers | branch state, open PRs/issues on `{org/repo}` |
 | {A major feature / workstream} | {the module(s), services, and runbooks that implement it} |
 | {A specific client / pilot} | {the code path, cron scripts, endpoints involved} |

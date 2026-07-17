@@ -1,10 +1,12 @@
 # {Project Name} - Agent instructions
 
-> Loaded automatically when Claude works in this project directory. Overrides/extends the workspace `CLAUDE.md`.
+> Loaded automatically when the agent works in this project directory. Overrides/extends the workspace `AGENTS.md`.
+>
+> Save this as `projects/{name}/AGENTS.md` with a `CLAUDE.md` symlink beside it (`ln -s AGENTS.md CLAUDE.md`) - Claude Code discovers nested `CLAUDE.md` files, not nested `AGENTS.md`.
 
 ## Agent persona
 
-{Who should Claude behave as on this project? Define the archetype.
+{Who should the agent behave as on this project? Define the archetype.
 
 Examples:
 
@@ -38,7 +40,7 @@ Options range from:
 
 ## Communication style
 
-{How should Claude communicate when producing artifacts for this project?
+{How should the agent communicate when producing artifacts for this project?
 
 Consider:
 
@@ -49,7 +51,7 @@ Consider:
 
 ## Project-specific rules
 
-{Any overrides or additions to workspace-level CLAUDE.md.
+{Any overrides or additions to the workspace-level `AGENTS.md`.
 
 Examples:
 

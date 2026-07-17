@@ -65,14 +65,22 @@ From interview outputs, create:
 1. `BRIEF.md` using [brief-template.md](references/brief-template.md)
 2. `STATUS.md` using [status-template.md](references/status-template.md)
 3. `WAYS-OF-WORKING.md` using [ways-of-working-template.md](references/ways-of-working-template.md)
-4. `CLAUDE.md` using the project CLAUDE.md template (`templates/PROJECT-CLAUDE.md`), populated from the agent persona interview answers. This file tunes Claude's behavior when working in this project directory.
+4. `AGENTS.md` using the project persona template (`templates/PROJECT-AGENTS.md`), populated from the agent persona interview answers. This file tunes the agent's behavior when working in this project directory.
+
+   Then add a `CLAUDE.md` symlink beside it, because Claude Code discovers nested `CLAUDE.md` files but not nested `AGENTS.md`:
+
+   ```bash
+   ln -s AGENTS.md projects/{name}/CLAUDE.md
+   ```
+
+   On Windows, where symlinks need elevated privileges, write a `CLAUDE.md` containing `@AGENTS.md` instead.
 
 Present each for review. Iterate based on feedback.
 
 ### Step 5: Update workspace
 
-1. Add the new project to the "Active projects" section in the workspace `CLAUDE.md` (at the repo root).
-2. Confirm that the project-level `CLAUDE.md` was generated with the persona configuration. (To adjust the persona later, invoke the `tune-persona` skill.)
+1. Add the new project to the "Active projects" section in the workspace `AGENTS.md` (at the repo root).
+2. Confirm that the project-level `AGENTS.md` was generated with the persona configuration, and that its `CLAUDE.md` symlink resolves. (To adjust the persona later, invoke the `tune-persona` skill.)
 
 ## Notes
 

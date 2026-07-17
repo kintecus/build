@@ -1,12 +1,14 @@
 # Obsidian integration
 
-If you maintain an Obsidian vault, you can wire it into this workspace so Claude can read your notes, navigate the graph, and update your daily note without leaving the CLI.
+If you maintain an Obsidian vault, you can wire it into this workspace so your agent can read your notes, navigate the graph, and update your daily note without leaving the CLI.
+
+This works with any agent that can run shell commands - it's a CLI wrapper, not a tool integration.
 
 This is optional. The workspace works fine without Obsidian.
 
 ## The integration, in one sentence
 
-You point Obsidian at the `build/` folder as a vault, keep Obsidian running, and install the `obsidian-cli` wrapper. Claude uses the CLI to read/write notes directly; you use Obsidian for visual navigation, graph views, and plugins.
+You point Obsidian at the `build/` folder as a vault, keep Obsidian running, and install the `obsidian-cli` wrapper. The agent uses the CLI to read/write notes directly; you use Obsidian for visual navigation, graph views, and plugins.
 
 ## Setup
 
@@ -15,7 +17,7 @@ You point Obsidian at the `build/` folder as a vault, keep Obsidian running, and
 3. Install `obsidian-cli`: <https://github.com/Yakitrak/obsidian-cli> (v1.12+).
 4. Verify with `obsidian-cli recents` while Obsidian is running.
 
-That's it. Claude can now use the CLI.
+That's it. The agent can now use the CLI.
 
 ## obsidian-cli conventions
 
@@ -112,4 +114,4 @@ Use the skill definitions in your own `~/.claude/skills/` folder. See `docs/skil
 
 ## Privacy
 
-If your vault contains personal or sensitive material, remember: everything in the vault is readable by Claude when the CLI is available. Treat the vault as you would any folder you've given Claude file access to. For highly sensitive notes, consider a separate vault that's not pointed at this workspace.
+If your vault contains personal or sensitive material, remember: everything in the vault is readable by the agent when the CLI is available. Treat the vault as you would any folder you've given an agent file access to. For highly sensitive notes, consider a separate vault that's not pointed at this workspace.

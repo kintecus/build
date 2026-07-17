@@ -23,7 +23,7 @@ Invoke when the user says:
 
 - **Branch format**: `{project}/week-{YYYY-WW}` where `YYYY-WW` is the ISO 8601 week (`date +%G-W%V`).
 - **Merge cadence**: weekly, on Fridays (adjust to your own rhythm).
-- **Active projects**: check the workspace `CLAUDE.md` "Active projects" section for the current list.
+- **Active projects**: check the workspace `AGENTS.md` "Active projects" section for the current list.
 
 If the workspace has a `GIT-WORKFLOW.md` at the repo root, prefer its conventions over the defaults above.
 

@@ -76,7 +76,7 @@ This is a method retrospective, not a project retrospective. For the project ver
 **Where the framework was thin:**
 
 - No good built-in workflow for processing call transcripts at speed - the `process-document` skill helped but was generic. A dedicated transcript-to-decisions skill would have saved hours.
-- Per-project agent persona (the `PROJECT-CLAUDE.md` pattern) was added late in the engagement; earlier projects relied on workspace defaults and the outputs were noticeably less calibrated.
+- Per-project agent persona (the `PROJECT-AGENTS.md` pattern) was added late in the engagement; earlier projects relied on workspace defaults and the outputs were noticeably less calibrated.
 - Cross-project visibility (when a question in this engagement related to a similar question in another) was manual. The "workspace context" promise has room to grow.
 
 **What broke:**

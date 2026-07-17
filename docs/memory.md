@@ -1,5 +1,8 @@
 # Auto-memory
 
+> [!NOTE]
+> The mechanism below is Claude Code's. The *conventions* - four memory types, why-lines, a terse index, what not to save - are the transferable part, and they apply to any agent with a persistent-memory feature. If yours has none, keep the same notes in a checked-in file and point `AGENTS.md` at it. See [portability.md](portability.md).
+
 Claude Code ships a per-project memory directory that persists across sessions. This doc explains how the workspace uses it and what conventions keep memory useful over time.
 
 ## Where memory lives
@@ -33,7 +36,7 @@ Use the prefix on the filename to indicate type:
 - Code patterns, conventions, architecture - these can be derived by reading the repo.
 - Git history or "who changed what" - `git log` / `git blame` are authoritative.
 - Fix recipes for specific bugs - the fix is in the code; the commit message has the context.
-- Anything already documented in `CLAUDE.md`.
+- Anything already documented in `AGENTS.md`.
 - Ephemeral task state.
 
 Memory is for things that will *still be useful in a future conversation*. If it won't, it's clutter.
@@ -61,11 +64,11 @@ For `feedback` and `project` types, structure the body as:
 **How to apply:** {When and where this guidance kicks in.}
 ```
 
-The `Why` line matters most. It lets future-you (and future-Claude) judge edge cases instead of following the rule blindly.
+The `Why` line matters most. It lets future-you (and your future agent) judge edge cases instead of following the rule blindly.
 
 ## MEMORY.md index
 
-`MEMORY.md` is loaded into every Claude session's context. Keep it terse - one line per memory, under ~150 characters:
+`MEMORY.md` is loaded into every session's context. Keep it terse - one line per memory, under ~150 characters:
 
 ```markdown
 # Memory
@@ -77,7 +80,7 @@ The `Why` line matters most. It lets future-you (and future-Claude) judge edge c
 
 The index is organized by topic, not chronology. Group related memories together.
 
-## When Claude should save memory
+## When the agent should save memory
 
 Save when you learn something durable:
 
@@ -87,7 +90,7 @@ Save when you learn something durable:
 
 Save immediately - don't batch. A rule the operator stated ten minutes ago is already at risk of being misremembered.
 
-## When Claude should access memory
+## When the agent should access memory
 
 - When the operator references prior-conversation work ("remember when we talked about...")
 - When you're about to make a choice that memory might have guided before
