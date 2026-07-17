@@ -45,22 +45,22 @@ gantt
 
 ## Navigation map
 
-If you want to see... | Look at...
----|---
-**Engagement framing** - what the project is, why it exists | [`BRIEF.md`](BRIEF.md)
-**Final state** - what shipped, what's open, what's frozen | [`STATUS.md`](STATUS.md)
-**Operating mode** - rhythm, capture habits, anti-patterns | [`WAYS-OF-WORKING.md`](WAYS-OF-WORKING.md)
-**Per-project agent persona** - how Claude was tuned for this engagement | [`CLAUDE.md`](CLAUDE.md)
-**Definition of Done with rigor** | [`decisions/2026-02-19-phase-1-dod.md`](decisions/2026-02-19-phase-1-dod.md)
-**Handling a hard scope-change request mid-flight** | [`decisions/2026-03-12-product-qa-gate-scope-change.md`](decisions/2026-03-12-product-qa-gate-scope-change.md)
-**Technical decision tracking** | [`decisions/2026-03-17-versioned-pair-deploy-plan.md`](decisions/2026-03-17-versioned-pair-deploy-plan.md)
-**Process decision with stakeholders** | [`decisions/2026-02-24-confluence-approval-process.md`](decisions/2026-02-24-confluence-approval-process.md)
-**A full Amazon-style WBR** | [`comms/2026-03-06-wbr-w10.md`](comms/2026-03-06-wbr-w10.md)
-**One-page status under pressure** | [`comms/2026-03-12-phase1-status-onepager.md`](comms/2026-03-12-phase1-status-onepager.md)
-**Escalation email - draft and final** | [`comms/2026-03-16-escalation-email-draft.md`](comms/2026-03-16-escalation-email-draft.md), [`comms/2026-03-16-escalation-email-option-A-close.md`](comms/2026-03-16-escalation-email-option-A-close.md)
-**Specs (data pipeline + feature)** | [`docs/specs/forecast-data-pipeline.md`](docs/specs/forecast-data-pipeline.md), [`docs/specs/spec-audience-broadening.md`](docs/specs/spec-audience-broadening.md)
-**Daily notes** - five days from across the engagement | [`docs/daily/`](docs/daily/)
-**Retrospective** - what worked, what didn't, would I do it again | [`retro/framework-retro.md`](retro/framework-retro.md)
+| If you want to see... | Look at... |
+|---|---|
+| **Engagement framing** - what the project is, why it exists | [`BRIEF.md`](BRIEF.md) |
+| **Final state** - what shipped, what's open, what's frozen | [`STATUS.md`](STATUS.md) |
+| **Operating mode** - rhythm, capture habits, anti-patterns | [`WAYS-OF-WORKING.md`](WAYS-OF-WORKING.md) |
+| **Per-project agent persona** - how the agent was tuned for this engagement | [`AGENTS.md`](AGENTS.md) |
+| **Definition of Done with rigor** | [`decisions/2026-02-19-phase-1-dod.md`](decisions/2026-02-19-phase-1-dod.md) |
+| **Handling a hard scope-change request mid-flight** | [`decisions/2026-03-12-product-qa-gate-scope-change.md`](decisions/2026-03-12-product-qa-gate-scope-change.md) |
+| **Technical decision tracking** | [`decisions/2026-03-17-versioned-pair-deploy-plan.md`](decisions/2026-03-17-versioned-pair-deploy-plan.md) |
+| **Process decision with stakeholders** | [`decisions/2026-02-24-confluence-approval-process.md`](decisions/2026-02-24-confluence-approval-process.md) |
+| **A full Amazon-style WBR** | [`comms/2026-03-06-wbr-w10.md`](comms/2026-03-06-wbr-w10.md) |
+| **One-page status under pressure** | [`comms/2026-03-12-phase1-status-onepager.md`](comms/2026-03-12-phase1-status-onepager.md) |
+| **Escalation email - draft and final** | [`comms/2026-03-16-escalation-email-draft.md`](comms/2026-03-16-escalation-email-draft.md), [`comms/2026-03-16-escalation-email-option-A-close.md`](comms/2026-03-16-escalation-email-option-A-close.md) |
+| **Specs (data pipeline + feature)** | [`docs/specs/forecast-data-pipeline.md`](docs/specs/forecast-data-pipeline.md), [`docs/specs/spec-audience-broadening.md`](docs/specs/spec-audience-broadening.md) |
+| **Daily notes** - five days from across the engagement | [`docs/daily/`](docs/daily/) |
+| **Retrospective** - what worked, what didn't, would I do it again | [`retro/framework-retro.md`](retro/framework-retro.md) |
 
 ## What worked, what didn't
 
