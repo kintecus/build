@@ -13,15 +13,15 @@ It's a harness you clone and shape to your own style, not a personal vault you i
 
 I'll be straight about what this actually is: an experiment in how far I can automate a PM role with an agentic coding tool. I run it in Claude Code, which is why the narrative below is written from that seat - but nothing in the framework is bound to it.
 
-There are two levels to it. The floor is the boring stuff - the monkey-job parts of program management: status updates, meeting-note cleanup, decision logging, chasing context across a dozen docs. I wanted those off my plate. The ceiling is the part I was genuinely curious about: how far can this actually go if I commit to it? I don't know the answer yet. That's the experiment.
+There are two levels to it. The floor is the monkey-job parts of program management - status updates, meeting-note cleanup, decision logging, chasing context across a dozen docs - and those are off my plate. The ceiling is the part I was curious about: how far does this actually go? Further than I expected. It works, and it keeps working better the harder I lean on it. The experiment now is finding where the limit really is - still ongoing, still changing.
 
-Going in, I had a few hypotheses:
+The bets I made going in, and how they've held up:
 
-- **Context is more controllable here than in a chat window.** In a chatbot, context is ephemeral - you re-paste, you re-explain, it drifts. In an agentic tool, my source of truth lives in markdown files that *are* the project's context, and the skills and rules I've defined make the agent maintain that context instead of me babysitting it. The bet is that this gives me tighter control over what the agent knows and how it behaves.
-- **I can offload more of the remembering to the agent.** Beyond controlling context, I wanted to see how much I can stop holding in my own head - and trust the tool to remember it instead. The markdown files plus auto-memory are the external brain; the test is whether I can lean on them hard enough to actually free up working memory, not just store things I still have to re-read myself.
-- **A terminal-first, mouse-free workflow keeps me focused.** I notice how easily I get pulled off task by switching between apps, especially browser-based ones. Staying in the terminal fragments my attention less. And honestly, I find it fun - that counts for something when you want a habit to stick.
+- **Context is more controllable here than in a chat window.** In a chatbot, context is ephemeral - you re-paste, you re-explain, it drifts. Here my source of truth lives in markdown files that *are* the project's context, and the skills and rules make the agent maintain it instead of me babysitting it. That control is the biggest single reason this works.
+- **I can offload more of the remembering to the agent.** I wanted to stop holding so much in my own head and trust the tool to remember instead. The markdown files plus auto-memory are the external brain, and I can lean on them hard enough to actually free up working memory - not just store things I still have to re-read.
+- **A terminal-first, mouse-free workflow keeps me focused.** I get pulled off task switching between apps, especially browser-based ones; staying in the terminal fragments my attention less. And I find it fun, which matters when you want a habit to stick.
 
-These are hypotheses, not conclusions. The case study in `examples/` is the first real-world test of whether they hold. If you're reading this, you're welcome to run the same experiment and see where it takes you.
+The case study in `examples/` is a real engagement run exactly this way, start to finish - the honest record of what the framework produces. You're welcome to clone it and run the same experiment yourself.
 
 ## The concept
 
