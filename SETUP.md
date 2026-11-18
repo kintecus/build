@@ -61,7 +61,7 @@ In other tools, ask the agent to list its available skills. You should see the e
 
 ## Optional integrations
 
-**Obsidian vault integration** - if you work out of Obsidian, see `docs/obsidian-integration.md` for how to wire `obsidian-cli` into this workspace and surface your notes to Claude.
+**Obsidian vault integration** - if you work out of Obsidian, see `docs/obsidian-integration.md` for how to wire the official Obsidian CLI and agent skills into this workspace and surface your notes to Claude.
 
 **Auto-memory** - Claude Code maintains typed memories (user/feedback/project/reference) across sessions. See `docs/memory.md` for the conventions this workspace follows. Other agents have their own memory features; the conventions port even where the wiring doesn't.
 

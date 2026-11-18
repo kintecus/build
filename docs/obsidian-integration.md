@@ -2,81 +2,41 @@
 
 If you maintain an Obsidian vault, you can wire it into this workspace so your agent can read your notes, navigate the graph, and update your daily note without leaving the CLI.
 
-This works with any agent that can run shell commands - it's a CLI wrapper, not a tool integration.
+This works with any agent that can run shell commands: it uses the official Obsidian CLI, not a tool-specific integration.
 
 This is optional. The workspace works fine without Obsidian.
 
 ## The integration, in one sentence
 
-You point Obsidian at the `build/` folder as a vault, keep Obsidian running, and install the `obsidian-cli` wrapper. The agent uses the CLI to read/write notes directly; you use Obsidian for visual navigation, graph views, and plugins.
+You point Obsidian at the `build/` folder as a vault, keep Obsidian running with its command line interface enabled, and install the official Obsidian agent skills. The agent uses the CLI to read and write notes; you use Obsidian for visual navigation, graph views, and plugins.
 
 ## Setup
 
-1. Install Obsidian: <https://obsidian.md>
+1. Install Obsidian (installer 1.12.7 or later): <https://obsidian.md>
 2. Open the `build/` directory as an Obsidian vault.
-3. Install `obsidian-cli`: <https://github.com/Yakitrak/obsidian-cli> (v1.12+).
-4. Verify with `obsidian-cli recents` while Obsidian is running.
+3. Enable the CLI: **Settings → General → Command line interface**, then follow the prompt to register it. See <https://help.obsidian.md/cli>.
+4. Verify with `obsidian help` while Obsidian is running.
+5. Install the official skills, which teach the agent the CLI, Obsidian Markdown, Bases, and Canvas: <https://github.com/obsidianmd/obsidian-skills>. In Claude Code:
 
-That's it. The agent can now use the CLI.
+   ```
+   /plugin install obsidian --marketplace obsidianmd/obsidian-skills
+   ```
 
-## obsidian-cli conventions
+   Codex and Cursor installs are covered in that repo's README.
 
-- `file=` resolves by note name (like wikilinks); `path=` is exact (folder/note.md).
-- Most commands default to the active file when file/path is omitted.
-- Quote values with spaces: `name="My Note"`.
-- Use `\n` for newline, `\t` for tab in content values.
-- To target a different vault: `obsidian-cli <cmd> vault="Other Vault"`.
+> Use the `obsidian` command that ships with the Obsidian installer. Third-party tools named `obsidian-cli` (on npm or GitHub) are unrelated and use a different command syntax.
 
-### Read and browse
+## Conventions worth knowing
 
-```bash
-obsidian-cli read path="<vault-relative-path>"
-obsidian-cli read file="<note name>"
-obsidian-cli files folder="<path>" ext=md
-obsidian-cli folders folder="<path>"
-obsidian-cli recents
-obsidian-cli random:read folder="<path>"
-```
+The official `obsidian-cli` skill carries the full command reference, so this doc doesn't repeat it. A few points matter for this workspace:
 
-### Search
-
-```bash
-obsidian-cli search query="<term>" path="<folder>" format=json limit=<n>
-obsidian-cli search:context query="<term>" path="<folder>"
-```
-
-### Links and graph
-
-```bash
-obsidian-cli links path="<note>"             # outgoing
-obsidian-cli backlinks path="<note>"         # incoming
-obsidian-cli orphans                         # no incoming links
-obsidian-cli deadends                        # no outgoing links
-obsidian-cli unresolved                      # broken wikilinks
-```
-
-### Daily note
-
-```bash
-obsidian-cli daily:read
-obsidian-cli daily:append content="<text>"
-obsidian-cli daily:prepend content="<text>"
-obsidian-cli tasks daily todo
-```
-
-### Write operations
-
-```bash
-obsidian-cli create name="<name>" content="<text>"
-obsidian-cli append path="<note>" content="<text>"
-obsidian-cli property:set name="<key>" value="<val>" path="<note>"
-```
-
-For the full command surface, see `obsidian-cli --help` or the project README.
+- **Vault targeting.** When the agent runs from inside `build/`, the CLI targets this vault automatically. If you have several vaults and the agent runs from elsewhere, pass `vault="<name>"`, which must be the first parameter: `obsidian vault="build" search query="STATUS"`.
+- **Exit codes don't signal failure.** The CLI exits 0 even when a command fails, so read its output (`Error: ...`) before trusting a write.
+- **Daily notes.** `obsidian daily:read`, `obsidian daily:append content="..."`, and `heading="<section>"` to insert under a specific heading.
 
 ## Obsidian Bases view
 
-Obsidian's Bases plugin lets you define tabular views over your vault. This workspace ships `OBSIDIAN.base` at the workspace root - a starter config that shows "all active project STATUS files" and "recently edited markdown outside `raw/`". Drop it in and tune to taste.
+Obsidian Bases lets you define tabular views over your vault (the official `obsidian-bases` skill covers the syntax). This workspace ships `OBSIDIAN.base` at the workspace root - a starter config that shows "all active project STATUS files" and "recently edited markdown outside `raw/`". Drop it in and tune to taste.
 
 Sample structure:
 
@@ -102,13 +62,14 @@ views:
 The author has skills that wrap common Obsidian workflows:
 
 - `daily-note` - read/append to the Obsidian daily note.
-- `obsidian-vault` - navigate and search the vault, read notes, follow links.
 - `clippings-digest` - summarize unreviewed web clippings into the daily note.
+
+General vault navigation and search is covered by the official skills above, so there's no need for a custom wrapper.
 
 These aren't bundled in this repo because they depend on personal vault structure. The patterns are simple enough to replicate:
 
-- A skill that runs `obsidian-cli daily:read` on invocation and surfaces today's note.
-- A skill that takes a search term, runs `obsidian-cli search`, and formats the results.
+- A skill that runs `obsidian daily:read` on invocation and surfaces today's note.
+- A skill that logs a timestamped line with `obsidian daily:append`, then checks the output for `Appended to:`.
 
 Use the skill definitions in your own `~/.claude/skills/` folder. See `docs/skills-catalog.md` for a discussion of which patterns to bundle vs. reference.
 

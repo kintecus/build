@@ -24,7 +24,6 @@ The author's personal setup includes several skills that depend on individual ha
 | Skill | What it does | Why not bundled |
 |---|---|---|
 | `daily-note` | Read/append to an Obsidian daily note | Assumes an Obsidian vault at a specific path |
-| `obsidian-vault` | Navigate and search the Obsidian vault | Same |
 | `clippings-digest` | Summarize unreviewed web clippings | Assumes a `Clippings/` folder structure |
 | `pr` | Create PRs with the author's PR template | Opinionated about PR format |
 | `commit` | Stage related changes and draft conventional commit messages | Opinionated about commit style |
